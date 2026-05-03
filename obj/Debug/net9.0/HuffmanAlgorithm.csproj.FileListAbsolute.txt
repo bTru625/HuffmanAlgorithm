@@ -1,0 +1,15 @@
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\bin\Debug\net9.0\HuffmanAlgorithm.exe
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\bin\Debug\net9.0\HuffmanAlgorithm.deps.json
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\bin\Debug\net9.0\HuffmanAlgorithm.runtimeconfig.json
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\bin\Debug\net9.0\HuffmanAlgorithm.dll
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\bin\Debug\net9.0\HuffmanAlgorithm.pdb
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.AssemblyInfoInputs.cache
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.AssemblyInfo.cs
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.sourcelink.json
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.dll
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\refint\HuffmanAlgorithm.dll
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.pdb
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\HuffmanAlgorithm.genruntimeconfig.cache
+C:\Users\trude\OneDrive\Documents\School\Winter_2026\Struct_donnes\prjCs_HuffmanAlgorithm\HuffmanAlgorithm\obj\Debug\net9.0\ref\HuffmanAlgorithm.dll
