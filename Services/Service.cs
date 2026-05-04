@@ -18,6 +18,7 @@ namespace HuffmanAlgorithm.Services
                     ("Input string was null or empty when trying to build the frequency set.");
             }
 
+
             Dictionary<char, int> frequencySet = new Dictionary<char, int>();
 
             foreach (char c in original)
