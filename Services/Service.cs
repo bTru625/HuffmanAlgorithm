@@ -10,6 +10,8 @@ namespace HuffmanAlgorithm.Services
     public class Service
     {
 
+        // COMPLEXITY = O(n) 
+        // One loop through no matter how long the string is. 
         public Dictionary<char, int> BuildFrequencySet(string original)
         {
 
@@ -36,6 +38,8 @@ namespace HuffmanAlgorithm.Services
             return frequencySet;
         }
 
+        // COMPLEXITY = O(n) 
+        // One loop through no matter how long the string is.
         public PriorityQueue<Node, int> BuildFrequencyQueue(Dictionary<char, int> frequencySet)
         {
             if (frequencySet == null || frequencySet.Count == 0)
@@ -57,7 +61,8 @@ namespace HuffmanAlgorithm.Services
             return frequencyQueue;
         }
 
-        // will modify the frequency queue until there is only one node left, also adding the parents and children, effectively making a Double Linked Tree, and calling the last remaining node, will be the root.
+        // COMPLEXITY = O(n log n)
+        // The while loop runs n-1 times, and each iteration involves dequeuing and enqueuing nodes, which is O(log n).
         public Node TurnPriorityQueueIntoTree(PriorityQueue<Node, int> frequencyQueue)
         {
             if (frequencyQueue.Count == 0)
@@ -86,7 +91,8 @@ namespace HuffmanAlgorithm.Services
             return frequencyQueue.Dequeue();
         }
 
-
+        // COMPLEXITY = O(n log n)
+        // Getting to any leaf node is O(log n) in a balanced tree, and we need to visit each leaf node to build the cypher table, which is O(n) in the worst case. 
         public Dictionary<char, List<bool>> BuildCypherTable(Node root)
         {
             if (root == null)
@@ -122,13 +128,20 @@ namespace HuffmanAlgorithm.Services
 
             Traverse(root, new List<bool>());
 
-            // Sort the cypher table by the bit length of the cypher. 
+
+
+            // Sort the cypher table by the bit length of the cypher.
+
+            // IDK how the compiler sorts this, so I dont want to speculate on the complexity, but I know that it is at least O(n log n) because sorting doesnt get faster than that. 
+
             cypherTable = cypherTable.OrderBy(entry => entry.Value.Count)
                                     .ToDictionary(entry => entry.Key, entry => entry.Value);
 
             return cypherTable;
         }
 
+        // COMPLEXITY = O(n) 
+        // One loop through no matter how long the string is.
         public List<List<bool>> EncodeString(string original, Dictionary<char, List<bool>> cypherTable)
         {
             if (string.IsNullOrEmpty(original))
@@ -160,6 +173,8 @@ namespace HuffmanAlgorithm.Services
             return encodedString;
         }
 
+        // COMPLEXITY = O(n) 
+        // One loop through no matter how long the string is.
         public string DecodeString(List<List<bool>> encodedString, Dictionary<char, List<bool>> cypherTable)
         {
             if (encodedString == null || encodedString.Count == 0)
