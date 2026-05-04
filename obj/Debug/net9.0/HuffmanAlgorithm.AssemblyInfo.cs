@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HuffmanAlgorithm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c62bf7c09b490418fd8a7eb2c37c920c3bb6c25a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+673d1c6d97d22998e50036eeba8a86a503796599")]
 [assembly: System.Reflection.AssemblyProductAttribute("HuffmanAlgorithm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HuffmanAlgorithm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

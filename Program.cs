@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using HuffmanAlgorithm.Services;
-using HuffmanAlgorithm.Entities;
+﻿using HuffmanAlgorithm.Services;
 
 class Program
 {
