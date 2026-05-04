@@ -7,21 +7,26 @@ namespace HuffmanAlgorithm.Entities
 {
     public class CharNode : Node
     {
-        public char character;
+        private char character;
 
         public CharNode(char character, int frequency)
         {
             this.character = character;
-            this.frequency = frequency;
+            base.SetFrequency(frequency);
 
             // CharNode will always be leaf nodes, never will have kids.  
-            lChild = null;
-            rChild = null;
+            base.SetLChild(null);
+            base.SetRChild(null);
         }
 
         public char GetCharacter()
         {
             return character;
+        }
+
+        public void SetCharacter(char character)
+        {
+            this.character = character;
         }
 
     }

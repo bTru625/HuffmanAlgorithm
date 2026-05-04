@@ -7,10 +7,10 @@ namespace HuffmanAlgorithm.Entities
 {
     public class Node
     {
-        public int frequency;
-        public Node? parent;
-        public Node? lChild;
-        public Node? rChild;
+        private int frequency;
+        private Node? parent;
+        private Node? lChild;
+        private Node? rChild;
 
         public Node()
         {
@@ -55,5 +55,23 @@ namespace HuffmanAlgorithm.Entities
         {
             return rChild;
         }
+
+        public void SetFrequency(int frequency)
+        {
+            this.frequency = frequency;
+        }
+        public void SetParent(Node? parent)
+        {
+            this.parent = parent;
+        }
+        public void SetLChild(Node? lChild)
+        {
+            this.lChild = lChild;
+        }
+        public void SetRChild(Node? rChild)
+        {
+            this.rChild = rChild;
+        }
+
     }
 }

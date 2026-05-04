@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using HuffmanAlgorithm.Entities;
@@ -71,20 +72,20 @@ namespace HuffmanAlgorithm.Services
                 Node right = frequencyQueue.Dequeue();
 
                 // this is a Node, not a CharNode!
-                Node parent = new Node(left.GetFrequency() + right.GetFrequency())
-                {
-                    lChild = left,
-                    rChild = right
-                };
+                Node parent = new Node(left.GetFrequency() + right.GetFrequency());
 
-                parent.lChild.parent = parent;
-                parent.rChild.parent = parent;
+                parent.SetLChild(left);
+                parent.SetRChild(right);
+
+                parent.GetLChild().SetParent(parent);
+                parent.GetRChild().SetParent(parent);
 
                 frequencyQueue.Enqueue(parent, parent.GetFrequency());
             }
 
             return frequencyQueue.Dequeue();
         }
+
 
         public Dictionary<char, List<bool>> BuildCypherTable(Node root)
         {
@@ -120,6 +121,11 @@ namespace HuffmanAlgorithm.Services
             }
 
             Traverse(root, new List<bool>());
+
+            // Sort the cypher table by the bit length of the cypher. 
+            cypherTable = cypherTable.OrderBy(entry => entry.Value.Count)
+                                    .ToDictionary(entry => entry.Key, entry => entry.Value);
+
             return cypherTable;
         }
 
@@ -188,7 +194,5 @@ namespace HuffmanAlgorithm.Services
 
             return decodedString;
         }
-
-
     }
 }
