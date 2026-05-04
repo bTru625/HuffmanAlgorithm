@@ -10,18 +10,23 @@ static void Main(string[] args)
     Service service = new Service();
 
     bool running = true;
-    Dictionary<char, List<bool>> cypherTable = new Dictionary<char, List<bool>>();
+    Dictionary<char, List<bool>>? cypherTable = null;
     List<List<bool>> encodedString = new List<List<bool>>();
+
+    Console.Clear();
 
     while (running)
     {
+
         Console.WriteLine("Menu:");
+        Console.WriteLine("--------------------------------------");
         Console.WriteLine("1. Encode string");
         Console.WriteLine("2. Decode string");
         Console.WriteLine("3. Display encoded string");
         Console.WriteLine("4. Display cypher table");
         Console.WriteLine("5. Exit");
-        Console.Write("Choose an option: ");
+        Console.WriteLine("--------------------------------------");
+        Console.Write("Enter selection : ");
 
         string choice = Console.ReadLine().Trim();
         choice = choice[0].ToString();
@@ -70,6 +75,7 @@ static void Main(string[] args)
 
                         isValidInput = true;
                         Console.WriteLine("String encoded successfully.");
+                        Console.WriteLine("--------------------------------------\n");
                     }
                 }
                 break;
@@ -82,10 +88,10 @@ static void Main(string[] args)
                     try
                     {
                         string decodedString = service.DecodeString(encodedString, cypherTable);
-                        Console.WriteLine($"Decoded string:\n" +
-                            "{\n" +
-                            $"{decodedString}\n" +
-                            "};");
+                        Console.WriteLine($"Decoded string:\n\n" +
+                            $"{decodedString}\n\n");
+
+                        Console.WriteLine("--------------------------------------\n");
                     }
                     catch (InvalidOperationException e)
                     {
@@ -96,24 +102,26 @@ static void Main(string[] args)
                 else
                 {
                     Console.WriteLine("No encoded string available. Encode first.");
+                    Console.WriteLine("--------------------------------------\n");
                 }
                 break;
-
-
 
 
             case "3":
                 if (encodedString != null || encodedString.Count > 0)
                 {
                     string result = string.Join(" ",
-                        encodedString.Select(inner => $"[{string.Join(",", inner.Select(b => b ? "1" : "0"))}]"));
+                        encodedString.Select(inner => $"[{string.Join("", inner.Select(b => b ? "1" : "0"))}]"));
                     Console.WriteLine($"Encoded string: \n{result}");
+                    Console.WriteLine("--------------------------------------\n");
                 }
                 else
                 {
                     Console.WriteLine("No encoded string available. Encode first.");
+                    Console.WriteLine("------------------------------------------\n");
                 }
                 break;
+
 
             case "4":
                 if (cypherTable != null && cypherTable.Count > 0)
@@ -122,12 +130,14 @@ static void Main(string[] args)
                     foreach (var entry in cypherTable)
                     {
                         string path = string.Join("", entry.Value.Select(b => b ? "1" : "0"));
-                        Console.WriteLine($"'{entry.Key}': [{path}]");
+                        Console.WriteLine($"{entry.Key} : [{path}]");
                     }
+                    Console.WriteLine("--------------------------------------\n");
                 }
                 else
                 {
                     Console.WriteLine("No cypher table available. Encode first.");
+                    Console.WriteLine("----------------------------------------\n");
                 }
                 break;
 
@@ -138,10 +148,14 @@ static void Main(string[] args)
                 running = false;
                 break;
 
+
             default:
                 Console.WriteLine("Invalid entry, please only enter the corresponding number.");
+                Console.WriteLine("----------------------------------------------------------\n");
                 break;
+
         }
     }
 }
-}
+
+Main(args);
